@@ -84,9 +84,26 @@
     box-shadow: 0 0 30px hsl(38, 70%, 50%, 0.15), 0 0 60px hsl(38, 70%, 50%, 0.05);
   }
 
+  .glow-gold-strong {
+    box-shadow: 0 0 40px hsl(38, 70%, 50%, 0.4), 0 0 80px hsl(38, 70%, 50%, 0.2), 0 0 120px hsl(38, 70%, 50%, 0.1);
+  }
+
   .line-gold {
     background: linear-gradient(90deg, transparent, hsl(38, 70%, 50%), transparent);
   }
+
+  .btn-float {
+    animation: btn-float 3s ease-in-out infinite;
+  }
+
+  .btn-float-delay {
+    animation: btn-float 3s ease-in-out 0.5s infinite;
+  }
+}
+
+@keyframes btn-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 html {
