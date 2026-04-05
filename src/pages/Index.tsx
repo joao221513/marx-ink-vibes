@@ -65,25 +65,20 @@ const Index = () => {
       </motion.nav>
 
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-dark pt-20">
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-        
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <section className="relative min-h-screen flex items-center justify-center bg-background pt-20">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-primary font-body text-sm tracking-[0.3em] mb-4">ARTE NA PELE</p>
-            <h2 className="font-display text-5xl md:text-7xl font-bold leading-tight mb-6">
-              <span className="text-gradient-gold">MARX</span>
-              <br />
+            <p className="text-primary font-body text-sm tracking-[0.3em] mb-2">ARTE NA PELE</p>
+            <h2 className="font-display text-5xl md:text-7xl font-bold leading-none mb-4">
+              <span className="text-gradient-gold">MARX</span>{" "}
               <span className="text-foreground">TATTOO</span>
             </h2>
-            <div className="h-[2px] w-24 line-gold mb-6" />
-            <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-md mb-8">
+            <div className="h-[2px] w-24 line-gold mb-4" />
+            <p className="text-muted-foreground font-body text-base leading-relaxed max-w-md mb-6">
               Transformando ideias em arte permanente. Especialista em realismo preto e cinza, 
               criando tatuagens únicas que contam sua história.
             </p>
