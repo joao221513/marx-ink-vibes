@@ -107,17 +107,14 @@ const Index = () => {
             className="relative flex justify-center"
           >
             <div className="relative w-72 md:w-96">
-              {/* Outer golden glow */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-gold-light via-primary to-gold-dark rounded-lg opacity-30 blur-2xl animate-pulse" />
-              <div className="absolute -inset-2 bg-gradient-to-br from-gold-light via-primary to-gold-dark rounded-sm opacity-50 blur-md" />
-              {/* Gold border frame */}
-              <div className="absolute -inset-[3px] bg-gradient-to-br from-gold-light via-primary to-gold-dark rounded-sm" />
+              <div className="absolute -inset-4 bg-gradient-to-br from-gold-light via-primary to-gold-dark rounded-full opacity-30 blur-2xl animate-pulse" />
+              <div className="absolute -inset-2 bg-gradient-to-br from-gold-light via-primary to-gold-dark rounded-2xl opacity-40 blur-lg" />
               <img
                 src={artistImg}
                 alt="Marx - Tatuador profissional"
-                className="relative rounded-sm w-full aspect-[3/4] object-cover object-top glow-gold-strong"
+                className="relative rounded-2xl w-full aspect-[3/4] object-cover object-top"
               />
-              <div className="absolute inset-0 rounded-sm bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                 <p className="font-display text-sm text-primary tracking-widest">ARTISTA</p>
                 <p className="font-display text-2xl font-bold text-foreground">MARX</p>
