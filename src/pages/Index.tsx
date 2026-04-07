@@ -278,7 +278,7 @@ const Index = () => {
                 href="https://wa.me/5582999999999"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-float inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-10 py-4 rounded-sm font-display font-semibold tracking-widest text-sm hover:bg-gold-light transition-all hover:shadow-[0_0_40px_hsl(38,70%,50%,0.3)]"
+                className="btn-3d inline-flex items-center justify-center gap-3 px-10 py-4 font-display font-bold tracking-widest text-sm"
               >
                 <Phone className="w-5 h-5" />
                 WHATSAPP
@@ -287,7 +287,7 @@ const Index = () => {
                 href="https://instagram.com/marxtattoo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-float-delay inline-flex items-center justify-center gap-3 border border-primary text-primary px-10 py-4 rounded-sm font-display font-semibold tracking-widest text-sm hover:bg-primary hover:text-primary-foreground transition-all"
+                className="btn-3d-outline inline-flex items-center justify-center gap-3 px-10 py-4 font-display font-bold tracking-widest text-sm"
               >
                 <Instagram className="w-5 h-5" />
                 INSTAGRAM
