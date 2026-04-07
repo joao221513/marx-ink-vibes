@@ -64,13 +64,25 @@ const Index = () => {
         </div>
       </motion.nav>
 
-      {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center bg-background pt-20">
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center relative z-10">
+      {/* Hero with background image */}
+      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        {/* Artist photo as background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={artistImg}
+            alt=""
+            className="w-full h-full object-cover object-top"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/70" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="max-w-xl"
           >
             <p className="text-primary font-body text-sm tracking-[0.3em] mb-2">ARTE NA PELE</p>
             <h2 className="font-display text-5xl md:text-7xl font-bold leading-none mb-4">
@@ -94,34 +106,12 @@ const Index = () => {
               </a>
             </div>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative flex justify-center"
-          >
-            <div className="relative w-72 md:w-96">
-              <div className="absolute -inset-4 bg-gradient-to-br from-gold-light via-primary to-gold-dark rounded-full opacity-30 blur-2xl animate-pulse" />
-              <div className="absolute -inset-2 bg-gradient-to-br from-gold-light via-primary to-gold-dark rounded-2xl opacity-40 blur-lg" />
-              <img
-                src={artistImg}
-                alt="Marx - Tatuador profissional"
-                className="relative rounded-2xl w-full aspect-[3/4] object-cover object-top"
-              />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="font-display text-sm text-primary tracking-widest">ARTISTA</p>
-                <p className="font-display text-2xl font-bold text-foreground">MARX</p>
-              </div>
-            </div>
-          </motion.div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background z-10" />
       </section>
 
-      {/* About */}
+      {/* About - moved up with artist info */}
       <section id="sobre" className="py-24 bg-gradient-section relative">
         <div className="container mx-auto px-6">
           <motion.div
@@ -167,6 +157,7 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+
 
       {/* Portfolio */}
       <section id="portfolio" className="py-24 relative">
