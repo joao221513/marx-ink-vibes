@@ -64,13 +64,25 @@ const Index = () => {
         </div>
       </motion.nav>
 
-      {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center bg-background pt-20">
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center relative z-10">
+      {/* Hero with background image */}
+      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        {/* Artist photo as background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={artistImg}
+            alt=""
+            className="w-full h-full object-cover object-top"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/70" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="max-w-xl"
           >
             <p className="text-primary font-body text-sm tracking-[0.3em] mb-2">ARTE NA PELE</p>
             <h2 className="font-display text-5xl md:text-7xl font-bold leading-none mb-4">
@@ -94,31 +106,56 @@ const Index = () => {
               </a>
             </div>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative flex justify-center"
-          >
-            <div className="relative w-72 md:w-96">
-              <div className="absolute -inset-4 bg-gradient-to-br from-gold-light via-primary to-gold-dark rounded-full opacity-30 blur-2xl animate-pulse" />
-              <div className="absolute -inset-2 bg-gradient-to-br from-gold-light via-primary to-gold-dark rounded-2xl opacity-40 blur-lg" />
-              <img
-                src={artistImg}
-                alt="Marx - Tatuador profissional"
-                className="relative rounded-2xl w-full aspect-[3/4] object-cover object-top"
-              />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="font-display text-sm text-primary tracking-widest">ARTISTA</p>
-                <p className="font-display text-2xl font-bold text-foreground">MARX</p>
-              </div>
-            </div>
-          </motion.div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background z-10" />
+      </section>
+
+      {/* About - moved up with artist info */}
+      <section id="sobre" className="py-24 bg-gradient-section relative">
+        <div className="container mx-auto px-6">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            custom={0}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <p className="text-primary font-body text-sm tracking-[0.3em] mb-3">CONHEÇA</p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-gradient-gold mb-6">
+              SOBRE O ARTISTA
+            </h2>
+            <div className="h-[2px] w-16 line-gold mx-auto mb-8" />
+            <p className="text-muted-foreground font-body text-lg leading-relaxed">
+              Com paixão pela arte e dedicação em cada traço, Marx Tattoo transforma 
+              conceitos em obras de arte vivas. Especializado em realismo preto e cinza, 
+              cada tatuagem é tratada como uma peça única — do esboço ao resultado final. 
+              A excelência técnica e o compromisso com a higiene e segurança garantem 
+              uma experiência profissional em cada sessão.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            custom={1}
+            className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto"
+          >
+            {[
+              { number: "500+", label: "Tatuagens" },
+              { number: "3", label: "Cidades" },
+              { number: "100%", label: "Dedicação" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <p className="font-display text-3xl md:text-4xl font-bold text-primary">{stat.number}</p>
+                <p className="text-muted-foreground font-body text-sm tracking-wider mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </section>
 
       {/* About */}
