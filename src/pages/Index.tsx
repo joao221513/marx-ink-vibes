@@ -84,14 +84,15 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="max-w-xl"
           >
-            <p className="text-primary font-body text-sm tracking-[0.3em] mb-2">ARTE NA PELE</p>
-            <h2 className="font-display text-5xl md:text-7xl font-bold leading-none mb-4">
-              <span className="text-gradient-gold">MARX</span>{" "}
+            <p className="text-primary font-body text-xs tracking-[0.4em] mb-3 uppercase">Arte na Pele</p>
+            <h2 className="font-display text-5xl md:text-7xl font-bold leading-[0.95] mb-5 drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+              <span className="text-gradient-gold">MARX</span><br />
               <span className="text-foreground">TATTOO</span>
             </h2>
-            <div className="h-[2px] w-24 line-gold mb-4" />
-            <p className="text-muted-foreground font-body text-base leading-relaxed max-w-md mb-6">
-              Transformando ideias em arte permanente. Especialista em realismo preto e cinza, 
+            <div className="h-[2px] w-24 line-gold mb-5" />
+            <p className="text-foreground/80 font-body text-base leading-[1.8] max-w-md mb-8 tracking-wide">
+              Transformando ideias em arte permanente.<br className="hidden sm:block" />
+              Especialista em realismo preto e cinza, 
               criando tatuagens únicas que contam sua história.
             </p>
             <div className="flex gap-4">
@@ -99,9 +100,9 @@ const Index = () => {
                 href="https://wa.me/5582999999999"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-float inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-sm font-display font-semibold tracking-widest text-sm hover:bg-gold-light transition-all hover:shadow-[0_0_30px_hsl(38,70%,50%,0.3)]"
+                className="btn-3d inline-flex items-center gap-3 px-8 py-4 font-display font-bold tracking-widest text-sm"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-5 h-5" />
                 ENTRAR EM CONTATO
               </a>
             </div>
