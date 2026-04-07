@@ -177,4 +177,9 @@ html {
 ::-webkit-scrollbar-thumb {
   background: hsl(38, 70%, 50%, 0.4);
   border-radius: 3px;
+
+#lovable-badge { 
+  display: none !important; 
+}
+  
 }
