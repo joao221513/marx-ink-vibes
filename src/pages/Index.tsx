@@ -158,52 +158,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About */}
-      <section id="sobre" className="py-24 bg-gradient-section relative">
-        <div className="container mx-auto px-6">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            custom={0}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <p className="text-primary font-body text-sm tracking-[0.3em] mb-3">CONHEÇA</p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-gradient-gold mb-6">
-              SOBRE O ARTISTA
-            </h2>
-            <div className="h-[2px] w-16 line-gold mx-auto mb-8" />
-            <p className="text-muted-foreground font-body text-lg leading-relaxed">
-              Com paixão pela arte e dedicação em cada traço, Marx Tattoo transforma 
-              conceitos em obras de arte vivas. Especializado em realismo preto e cinza, 
-              cada tatuagem é tratada como uma peça única — do esboço ao resultado final. 
-              A excelência técnica e o compromisso com a higiene e segurança garantem 
-              uma experiência profissional em cada sessão.
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            custom={1}
-            className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto"
-          >
-            {[
-              { number: "500+", label: "Tatuagens" },
-              { number: "3", label: "Cidades" },
-              { number: "100%", label: "Dedicação" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="font-display text-3xl md:text-4xl font-bold text-primary">{stat.number}</p>
-                <p className="text-muted-foreground font-body text-sm tracking-wider mt-1">{stat.label}</p>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
       {/* Portfolio */}
       <section id="portfolio" className="py-24 relative">
